@@ -77,7 +77,7 @@ zOF Objective function value [€]
 positive variables
 pG(g,t)     Power produced by generating unit g in representative time period t [MW]
 pGmax(g)    Capacity built of generating unit g [MW]
-pLS(t)      Load-shedding power [MW]
+pLS(t)      Load-shedding power in representative time period t [MW]
 ;
 
 equations
