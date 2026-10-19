@@ -5,6 +5,7 @@ Slides:
 - Lecture 2: Operation and planning problems -> courseORlecture2.pdf.
 - Lecture 3: Operational variability -> courseORlecture3.pdf.
 - Lecture 4: Uncertainty and risk -> courseORlecture4.pdf.
+- Lecture 5: Further applications -> courseORlecture5.pdf.
 
 Álvaro García-Cerezo
 
