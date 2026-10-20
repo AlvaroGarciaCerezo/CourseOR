@@ -18,11 +18,9 @@ Scalars
 *Alpha   Risk-aversion level [p.u.]  /0./
 Alpha   Risk-aversion level [p.u.]  /0.50/
 *Alpha   Risk-aversion level [p.u.]  /0.99/
-Expect  Expected value [€]           
 CImax   Investment budget [€]       /200000/
 CLS     Load-shedding cost [€\MWh]  /1000/
 CRF     Capital recovery factor     /0.10086/
-Worst   Worst-case value [€]
 ;
 
 parameter Prob(w) Probability of scenario w [p.u.]
@@ -63,8 +61,6 @@ g2  15
 g3  8
 /
 ;
-
-parameter CostW(w) Cost of scenario w [€];
 
 parameter PD(t,w) Power demanded in representative time period t and scenario w [MW]
 /
@@ -150,8 +146,3 @@ eq5 Upper limit of pLS
 eq6 Upper limit of pG for existing generating units g
 eq7 Upper limit of pG for candidate generating units g
 ;
-
-* The following lines should be included after solving the problem.
-CostW(w) = sum(t, Rho(t) * ( CLS*pLS.L(t,w) + sum(g, CGV(g)*pG.L(g,t,w) ) ) ) + sum(g$gNew(g), CGI(g)*CRF*pGmax.L(g) );
-Expect = sum(w, Prob(w) * CostW(w) );
-Worst = smax(w, CostW(w) );
