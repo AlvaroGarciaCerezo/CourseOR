@@ -121,15 +121,15 @@ g3  500
 ;
 
 variables
-varphi      Value-at-risk [€]
-zOF Objective function value [€]
+varphi  Value-at-risk [€]
+zOF     Objective function value [€]
 ;
 
 positive variables
 pG(g,t,w)   Power produced by generating unit g in representative time period t and scenario w [MW]
 pGmax(g)    Capacity built of generating unit g [MW]
 pLS(t,w)    Load-shedding power in representative time period t and scenario w [MW]
-uW(w)       Auxiliary variable to compute the CVaR
+uW(w)       Auxiliary variable to compute the CVaR [€]
 ;
 
 equations
