@@ -121,8 +121,8 @@ g3  500
 ;
 
 variables
-varphi      Value-at-risk [€]
-zOF Objective function value [€]
+varphi  Value-at-risk [€]
+zOF     Objective function value [€]
 ;
 
 positive variables
