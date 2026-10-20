@@ -107,10 +107,6 @@ t4.w10  990
 /
 ;
 
-parameter PDexpected(t) Expected value of PD(t w) considering the probabilities of scenarios w;
-PDexpected(t) = sum(w, Prob(w) * PD(t,w) );
-display PDexpected;
-
 parameter PGmaxOld(g) Capacity of existing generating unit g [MW]
 /
 g1  300
