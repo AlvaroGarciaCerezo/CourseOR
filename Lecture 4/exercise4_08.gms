@@ -80,6 +80,8 @@ g3  8
 
 parameter CostWloop(w,k) Cost of scenario w and iteration k [€];
 
+parameter CVaRloop(k) CVaR in iteration k [€];
+
 parameter ExpectLoop(k) Expected value in iteration k [€];
 
 parameter PD(t,w) Power demanded in representative time period t and scenario w [MW]
@@ -142,8 +144,6 @@ g3  500
 
 Parameter PGmaxLoop(g,k) Objective function value in iteration k [€];
 
-parameter WorstLoop(k) Worst-case value [€];
-
 variables
 varphi  Value-at-risk [€]
 zOF     Objective function value [€]
@@ -176,9 +176,9 @@ LOOP(k,
     solve exercise4_8 minimizing zOF using lp;
     CostWloop(w,k) = sum(t, Rho(t) * ( CLS*pLS.L(t,w) + sum(g, CGV(g)*pG.L(g,t,w) ) ) ) + sum(g$gNew(g), CGI(g)*CRF*pGmax.L(g) );
     ExpectLoop(k) = sum(w, Prob(w) * CostWloop(w,k) );
-    WorstLoop(k) = smax(w, CostWloop(w,k) );
+    CVaRloop(k) = varphi.L + ( 1 / ( 1 - Alpha ) ) * sum(w, Prob(w) * uW.L(w) );
     ZOFloop(k) = zOF.L;
     PGmaxLoop(g,k) = pGmax.L(g);
 );
 
-display ZOFloop, PGmaxLoop, CostWloop, ExpectLoop, WorstLoop;
+display ZOFloop, PGmaxLoop, CostWloop, ExpectLoop, CVaRloop;
