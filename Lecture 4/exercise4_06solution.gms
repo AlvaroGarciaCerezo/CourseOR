@@ -239,7 +239,7 @@ of..                                                    zOF =E= sum(w, Prob(w) *
 eq1(t,w)..                                              pDA(t,w) =E= pDAP(t,w) - pDAS(t,w);
 eq2(t,w)..                                              pDAP(t,w) =L= PDAPmax;
 eq3(t,w)..                                              pDAS(t,w) =L= PDASmax;
-eq4(t,w,wTilde)$(LambdaDA(t,w) lt LambdaDA(t,wTilde)).. pDA(t,w) =G= pDA(t,wTilde);
+eq4(t,w,wTilde)$(LambdaDA(t,w) le LambdaDA(t,wTilde)).. pDA(t,w) =G= pDA(t,wTilde);
 eq5(t,w)..                                              pDAS(t,w) - pDAP(t,w) =E= pG(t,w) + pPV(t,w) + pBD(t,w) - pBC(t,w) - pD(t,w);
 eq6(t,w)..                                              pG(t,w) =L= PGmax;
 eq7(t,w)..                                              pPV(t,w) =L= PPVmax*APV(t);
