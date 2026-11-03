@@ -46,12 +46,12 @@ g2.o2   25
 /;
 
 VARIABLES
-zSW Social welfare
+zSW Social welfare [W]
 ;
 
 POSITIVE VARIABLES
-pC(c,b) Power of consumer c and bid b
-pG(g,o) Power of producer g and offer o
+pC(c,b) Power of consumer c and bid b [MW]
+pG(g,o) Power of producer g and offer o [MW]
 ;
 
 EQUATIONS
