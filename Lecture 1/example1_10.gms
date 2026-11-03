@@ -4,8 +4,6 @@
 * Lecture 1
 * Example 10
 
-options optcr = 0;
-
 variables
 z
 ;
