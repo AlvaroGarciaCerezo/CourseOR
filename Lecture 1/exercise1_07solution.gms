@@ -4,7 +4,7 @@
 * Lecture 1
 * Exercise 7
 
-options lp = cplex, optcr = 0;
+options lp = cplex;
 
 Set
 i /i1*i4/
