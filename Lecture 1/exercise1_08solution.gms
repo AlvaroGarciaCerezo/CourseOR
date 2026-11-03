@@ -4,7 +4,7 @@
 * Lecture 1
 * Exercise 8
 
-options lp = cplex, optcr = 0;
+options lp = cplex;
 
 VARIABLES
 zSW Social welfare [€]
