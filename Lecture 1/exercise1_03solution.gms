@@ -4,8 +4,6 @@
 * Lecture 1
 * Exercise 3
 
-options optcr = 0;
-
 variables
 z
 ;
