@@ -4,7 +4,7 @@
 * Lecture 2
 * Exercise 2
 
-options lp = cplex, optcr = 0;
+options lp = cplex;
 
 sets
 t Hourly time periods /t1*t24/
