@@ -4,7 +4,7 @@
 * Lecture 2
 * Exercise 7
 
-options lp = cplex, optcr = 0;
+options lp = cplex;
 
 sets
 g       Generating units            /g1*g3/
