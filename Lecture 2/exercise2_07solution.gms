@@ -17,11 +17,11 @@ Scalars
 * Case a)
 CImax   Investment budget [€]       /200000/
 * Case b)
-*CImax   Investment budget [€]   /180000/
+*CImax   Investment budget [€]       /180000/
 * Case c)
-*CImax   Investment budget [€]   /145000/  
+*CImax   Investment budget [€]       /145000/  
 CLS     Load-shedding cost [€\MWh]  /10000/
-CRF     Capital recovery factor     /0.10086/ 
+CRF     Capital recovery factor     /0.10086/
 ;
 
 parameter Rho(t) Weight of representative time period t [h]
